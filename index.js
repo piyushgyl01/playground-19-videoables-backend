@@ -1,15 +1,15 @@
 import express from "express";
 import { createServer } from "node:http";
 
-import connectToDatabase from "./db/db.connect.js";
+import connectToDatabase from "./src/db/db.connect.js";
 
 import { Server } from "socket.io";
 
 import mongoose from "mongoose";
 
 import cors from "cors";
-import { connectToSocket } from "./controllers/socketManager.js";
-import userRoutes from "./routes/users.routes.js";
+import { connectToSocket } from "./src/controllers/socketManager.js";
+import userRoutes from "./src/routes/users.routes.js";
 
 const app = express();
 const server = createServer(app);
